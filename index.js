@@ -81,17 +81,20 @@ card.style.flexDirection = 'column'
 card.style.justifyContent = 'space-between';
 card.style.alignItems = 'center'
 
-let img = document.createElement('div');
+let img = document.createElement('a');
 img.style.backgroundImage = 'url(https://www.ctrs.com.ua/_next/image/?url=https://i.citrus.world/imgcache/size_180/uploads/shop/f/3/f3544d524096a2da7effed0face0e849.jpg&w=256&q=60)';
 img.style.width = '135px';
 img.style.height = '180px';
+img.href = '#';
 card.append(img);
 
-let title = document.createElement('h3');
+let title = document.createElement('a');
 title.innerText = 'Apple iPhone 12 Pro 256GB Graphite (MGMP3)';
+title.href = '#';
 title.style.fontFamily = 'Roboto'
 title.style.fontSize = '14px';
-title.style.fontWeight = '400'
+title.style.fontWeight = '400';
+title.style.color = 'black';
 card.append(title)
 
 let cost = document.createElement('h2');
@@ -117,11 +120,12 @@ descriptText.forEach(el => {
     el.style.fontSize = '12px';
     el.style.fontWeight = '400';
     el.style.margin = '2px 0px'
-    el.style.color = 'lightgray'
+    el.style.color = 'rgb(161, 154, 154)'
 })
 
 let buy = document.createElement('a');
-buy.innerText = 'КУПИТЬ'
+buy.innerText = 'КУПИТЬ';
+buy.href = '#'
 buy.style.fontFamily = 'Roboto';
 buy.style.fontSize = '20px';
 buy.style.fontWeight = '700';
@@ -129,3 +133,10 @@ buy.style.color = 'orange';
 buy.style.padding = '5px 15px';
 buy.style.border = 'solid 2px orange'
 card.append(buy);
+
+
+Object.keys(descriptText[0]).forEach((key) => {
+    console.log(key);
+})
+
+console.log('FF')
