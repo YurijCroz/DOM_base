@@ -32,15 +32,11 @@ containerSecond.style.marginBottom = '20px';
 containerSecond.style.display = 'flex';
 containerSecond.style.justifyContent = 'space-between';
 
-let mon = document.createElement('p');
-let tue = document.createElement('p');
-let wed = document.createElement('p');
-let thu = document.createElement('p');
-let fri = document.createElement('p');
-let sat = document.createElement('p');
-let sun = document.createElement('p');
+let mon, tue, wed, thu, fri, sat, sun
 
 let list = [mon, tue, wed, thu, fri, sat, sun];
+
+list = list.map(el => el = document.createElement('p'))
 list.forEach(el => containerSecond.append(el));
 
 list.forEach((el, i) => {
@@ -134,9 +130,3 @@ buy.style.padding = '5px 15px';
 buy.style.border = 'solid 2px orange'
 card.append(buy);
 
-
-Object.keys(descriptText[0]).forEach((key) => {
-    console.log(key);
-})
-
-console.log('FF')
